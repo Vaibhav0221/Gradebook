@@ -110,9 +110,3 @@ def viewer(student_id):
         cour = course.query.filter_by(course_id=i.ecourse_id).first()
         enroll.append({"code":cour.course_code,"name":cour.course_name,"desc":cour.course_description})
     return render_template("view.html",student=stu,enroll=enroll)
-
-#if __name__=="__main__":
-    #app.run(
-        port=8080,
-        debug=True,
-        use_reloader=False)

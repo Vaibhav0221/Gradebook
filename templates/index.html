@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <h1>Welcome to the Gradebook Application</h1>
+    <p>Manage student records and course enrollments efficiently.</p>
+    <a href="https://github.com/Vaibhav0221/Gradebook" target="_blank">GitHub Repository</a>
     <h1>Students list</h1>
     {% if students|length==0 %}
         <p>No student found. Add the students now!</p>

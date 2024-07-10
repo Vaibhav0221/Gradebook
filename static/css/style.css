@@ -12,6 +12,25 @@ h1 {
     color: #0056b3;
     margin-top: 20px;
 }
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button, .button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+
 
 /* Links */
 a[type="button"] {
@@ -27,7 +46,7 @@ a[type="button"] {
     font-size: 16px;
 }
 
-a[type="button"]:hover {
+a[type="button"]:hover,button:hover, .button:hover {
     background-color: #0056b3;
 }
 

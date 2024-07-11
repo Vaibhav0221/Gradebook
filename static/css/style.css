@@ -137,6 +137,12 @@ a.home-button {
     text-decoration: none;
     border-radius: 5px;
 }
+footer {
+    text-align: center; /* Center the copyright text */
+    padding: 10px; /* Add some padding */
+    font-size: 0.8em; /* Adjust font size slightly smaller */
+    color: rgb(41, 39, 39); /* Set a light gray color for the text */
+  }
 
 a.home-button:hover {
     background-color: #0056b3;

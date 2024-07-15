@@ -7,8 +7,12 @@ Gradebook Application Portal is a simple Flask application used for maintaning s
 ## Index
 -   [Features](#Features)
 -   [File Structure](#File-Structure)
+-   [Database Structure](#Database-Structure)
+    -   [Course Table Schema](#Course-Table-Schema)
+    -   [Student Table Schema](#Student-Table-Schema)
+    -   [Enrollment Table Schema](#Enrollment-Table-Schema)
 
-### Features
+## Features
 
 - Add a student
 - Update/ delete a student
@@ -16,7 +20,7 @@ Gradebook Application Portal is a simple Flask application used for maintaning s
 
 
 
-### File Structure
+## File Structure
 
 ```bash
 .
@@ -34,4 +38,33 @@ Gradebook Application Portal is a simple Flask application used for maintaning s
 ├── database.sqlite3
 └── requirements.txt
 ```
+## Database Structure
 
+### Course Table Schema
+
+```bash
+| Column Name        |	Column Type | Constraints                |  
+| course_id	         |   Integer    | Primary Key, Auto Increment|
+| course_name        |	  String	| Not Null                   |   
+| course_code        |    String	| Unique, Not Null           |
+| course_description |    String    |                            |
+```
+
+### Student Table Schema
+
+```bash
+| Column Name	| Column Type	| Constraints                   |
+| student_id	| Integer	    | Primary Key, Auto Increment   |
+| roll_number	| String	    | Unique, Not Null              |
+| first_name	| String	    | Not Null                      |
+| last_name	    | String        |                               |	
+```
+
+### Enrollment Table Schema
+
+```bash
+| Column Name	 | Column Type	| Constraints                                |
+| enrollment_id	 | Integer	    | Primary Key, Auto Increment                |
+| student_id	 | Integer	    | Foreign Key (student.student_id), Not Null |
+| course_id      | Integer	    | Foreign Key (course.course_id), Not Null   |
+```

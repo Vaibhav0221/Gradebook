@@ -99,6 +99,11 @@ Gradebook Application Portal is a simple Flask application used for maintaning s
     pip install -r requirements.txt
 ```
 
+- Run the app file
+```bash
+    flask run
+```
+
 ## Screenshots
 
 ![Add_student](https://github.com/user-attachments/assets/8ba53ec0-2cb2-422d-9779-444b09f509bc)

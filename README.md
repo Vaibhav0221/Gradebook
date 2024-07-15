@@ -2,7 +2,7 @@
 
 Gradebook Application Portal is a simple Flask application used for maintaning student's detail and their enrolled cources
 
-<a src="https://github.com/Vaibhav0221/Gradebook/blob/main/Images/Home.png">
+![Home](https://github.com/user-attachments/assets/8725b55f-042c-4aac-9c67-1245a465a204)
 
 ## Features
 

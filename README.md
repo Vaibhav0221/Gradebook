@@ -43,28 +43,34 @@ Gradebook Application Portal is a simple Flask application used for maintaning s
 ### Course Table Schema
 
 ```bash
-| Column Name        |	Column Type | Constraints                |  
-| course_id	         |   Integer    | Primary Key, Auto Increment|
-| course_name        |	  String	| Not Null                   |   
-| course_code        |    String	| Unique, Not Null           |
-| course_description |    String    |                            |
+| Column Name        | Column Type | Constraints                      |  
+|--------------------|-------------|----------------------------------|
+| course_id          | Integer     | Primary Key, Auto Increment      |
+| course_name        | String      | Not Null                         |   
+| course_code        | String      | Unique, Not Null                 |
+| course_description | String      |                                  |
+
 ```
 
 ### Student Table Schema
 
 ```bash
-| Column Name	| Column Type	| Constraints                   |
-| student_id	| Integer	    | Primary Key, Auto Increment   |
-| roll_number	| String	    | Unique, Not Null              |
-| first_name	| String	    | Not Null                      |
-| last_name	    | String        |                               |	
+| Column Name        | Column Type | Constraints                      |
+|--------------------|-------------|----------------------------------|
+| student_id         | Integer     | Primary Key, Auto Increment      |
+| roll_number        | String      | Unique, Not Null                 |
+| first_name         | String      | Not Null                         |
+| last_name          | String      |                                  |	
+	
 ```
 
 ### Enrollment Table Schema
 
 ```bash
-| Column Name	 | Column Type	| Constraints                                |
-| enrollment_id	 | Integer	    | Primary Key, Auto Increment                |
-| student_id	 | Integer	    | Foreign Key (student.student_id), Not Null |
-| course_id      | Integer	    | Foreign Key (course.course_id), Not Null   |
+| Column Name        | Column Type | Constraints                                      |
+|--------------------|-------------|--------------------------------------------------|
+| enrollment_id      | Integer     | Primary Key, Auto Increment                      |
+| student_id         | Integer     | Foreign Key (student.student_id), Not Null       |
+| course_id          | Integer     | Foreign Key (course.course_id), Not Null         |
+
 ```

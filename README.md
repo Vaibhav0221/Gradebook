@@ -15,7 +15,8 @@ Gradebook Application Portal is a simple Flask application used for maintaning s
 -   [Getting Started](#Getting-Started)
 	-   [Prerequisites](#Prerequisites)
 	-   [Installation](#Installation)
--   [Screenshots](#Screenshots)       	
+-   [Screenshots](#Screenshots)
+-   [Further Api Implementation](#Further-Api-Implementation)       	
 
 ## Features
 
@@ -110,6 +111,20 @@ Gradebook Application Portal is a simple Flask application used for maintaning s
 
 ![Student_details](https://github.com/user-attachments/assets/538ff960-0d12-4f9c-8e60-74e5ed088256)
 
+## Further Api Implementation
+| Method | Path | Description |
+|--|--|---| 
+| GET |/api/course/{course_id} |Operation to Read Course resource|
+| GET |/api/student/{student_id} |Operation to Read Stduent resource |
+| GET |/api/student/{student_id}/course |Operation to get the list of enrollments, the student is enrolled in. |
+| PUT |/api/course/{course_id} |Operation to update the course |
+| PUT |/api/student/{student_id} |Operation to update student resource |
+| DELETE |/api/course/{course_id} |Operation to delete the course resource |
+| DELETE |/api/student/{student_id} |Operation to delete the student resource |
+| DELETE |  /api/student/{student_id}/course/{cource_id} |Operation to delete the student in particular enrolled course |
+| POST |/api/course |Operation to create course resource |
+| POST |/api/student |Operation to create student resource |
+| POST |/api/student/{student_id}/course |Operation to add student enrollment |
 
 
 

@@ -40,8 +40,9 @@ Gradebook Application Portal is a simple Flask application used for maintaning s
     ├── update.html
     └── view.html
 ├── README.md
-├── app.py
-├── database.sqlite3
+├── app.py             //main file
+├── database.sqlite3   //database
+├── openapi.yaml       //Api Documentation
 └── requirements.txt
 ```
 ## Database Structure

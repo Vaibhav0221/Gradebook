@@ -11,7 +11,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 #app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///Users/vaibhav/Desktop/iit madras/week_5/database.sqlite3"
 #app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///' + os.path.join(basedir, 'database.sqlite3')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///api_database.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.sqlite3'
 app.app_context().push()
 api=Api(app)
 
@@ -259,7 +259,6 @@ api.add_resource(StudentAPI, "/api/student/<int:student_id>", "/api/student")
 api.add_resource(EnrollAPI,"/api/student/<int:student_id>/course", "/api/student/<int:student_id>/course/<int:course_id>")
 
 
-
 class Student(db.Model):
     __tablename__='student'
     student_id = db.Column(db.Integer, primary_key=True, autoincrement = True)
@@ -275,7 +274,7 @@ class course(db.Model):
     course_description = db.Column(db.String)
 
 class Enrollments(db.Model):
-    __tablename__='enrollment'
+    __tablename__='enrollments'
     enrollment_id = db.Column(db.Integer, primary_key=True, autoincrement = True)
     student_id = db.Column(db.Integer, db.ForeignKey(Student.student_id), nullable=True)  
     course_id = db.Column(db.Integer, db.ForeignKey(course.course_id), nullable=True)  
